@@ -1,0 +1,34 @@
+<div class="sign-up">
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" [(ngModel)]="firstName" /></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" [(ngModel)]="lastName" /></td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" [(ngModel)]="dob" /></td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td><input type="number" [(ngModel)]="mobileNumber" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" [(ngModel)]="password" /></td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td><input type="password" [(ngModel)]="confirmPassword" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button (click)="onSignUp()">Sign Up</button></td>
+        </tr>
+
+    </table>
+
+</div>

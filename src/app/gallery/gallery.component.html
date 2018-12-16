@@ -1,0 +1,95 @@
+<div class="row">
+    <div class="col-md-2">
+        First Name
+    </div>
+    <div class="col-md-2">
+        <input type="text" [(ngModel)]="gallery.gallery.firstName" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Last Name
+    </div>
+    <div class="col-md-2">
+        <input type="text" [(ngModel)]="gallery.gallery.lastName" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Mobile Number
+    </div>
+    <div class="col-md-2">
+        <input type="text" [(ngModel)]="gallery.gallery.mobileNumber" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Location
+    </div>
+    <div class="col-md-2">
+        <input type="text" [(ngModel)]="gallery.gallery.location" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Date of Year 
+    </div>
+    <div class="col-md-2">
+        <input type="text" [(ngModel)]="gallery.gallery.dateOfYear" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 offset-md-2">
+        <button (click)="onSubmit()">Submit</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        <button (click)="onPopulate()">Populate List</button>
+    </div>
+</div>
+<div *ngIf="galleryData">
+    <div *ngFor="let gallery of galleryData" class="gallery-data">
+        <div class="row">
+            <div class="col-md-2">
+                    First Name
+            </div>
+            <div class="col-md-2">
+                    {{gallery.firstName}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                    Last Name
+            </div>
+            <div class="col-md-2">
+                    {{gallery.lastName}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                    Mobile Number
+            </div>
+            <div class="col-md-2">
+                    {{gallery.mobileNumber}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                    Location
+            </div>
+            <div class="col-md-2" mouseOver>
+                    {{gallery.location}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                    Age
+            </div>
+            <div class="col-md-2">
+                    {{gallery.dateOfYear | findAge}}
+            </div>
+        </div>
+    </div>
+</div>
